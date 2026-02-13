@@ -37,33 +37,40 @@ GRANT CONNECT, RESOURCE, DBA TO [TONY_PLSQLAUCA_29158];
 
 
 *Evidence:* Screenshots show PDB creation, open state (READ WRITE), and user verification.
-<img width="741" height="436" alt="Creating pdb" src="https://github.com/user-attachments/assets/33586c68-bd17-40db-b573-5d6162744330" />
-<img width="875" height="621" alt="PDB open" src="https://github.com/user-attachments/assets/30235688-04fd-498d-bbe7-1ae84baa40a1" />
-<img width="702" height="521" alt="USER_EXISTS AND TEMP CREATION" src="https://github.com/user-attachments/assets/edeb649c-2f35-444a-927b-7b3aae169da0" />
+<img width="944" height="232" alt="pdb creation" src="https://github.com/user-attachments/assets/0319e4a2-e04e-4116-978c-fd894f34339b" />
+
+<img width="922" height="645" alt="pdb open" src="https://github.com/user-attachments/assets/6802b5a8-9022-4cbc-a259-20f147b5805a" />
+
+
+<img width="935" height="274" alt="user exists" src="https://github.com/user-attachments/assets/804752e9-6c2c-4ec5-9ade-4602ba632833" />
 
 
 ---
 
 ## Task 2: Create and Delete Temporary PDB
 
-*Temp PDB:* [RO_pdb_29152]
+*Temp PDB:* [To_pdb_29158]
 
 *Commands:*
 sql
-CREATE PLUGGABLE DATABASE [RO_pdb_29152]
-ADMIN USER temp_admin IDENTIFIED BY [password]
-FILE_NAME_CONVERT = ('pdbseed', '[RO_pdb_29152]');
+CREATE PLUGGABLE DATABASE [To_pdb_29158]
+ADMIN USER temp_admin IDENTIFIED BY [12345]
+FILE_NAME_CONVERT = ('pdbseed', '[To_pdb_29158]');
 
-ALTER PLUGGABLE DATABASE [RO_pdb_29152] CLOSE IMMEDIATE;
-DROP PLUGGABLE DATABASE [RO_pdb_29152] INCLUDING DATAFILES;
+ALTER PLUGGABLE DATABASE [To_pdb_29158] CLOSE IMMEDIATE;
+DROP PLUGGABLE DATABASE [To_pdb_29158] INCLUDING DATAFILES;
 
 
 *Evidence:* Screenshots show creation, both PDBs existing, deletion, and verification.
-<img width="702" height="521" alt="USER_EXISTS AND TEMP CREATION" src="https://github.com/user-attachments/assets/4e2d1041-d7fa-4bd9-90d5-6aa884f4d79d" />
-<img width="840" height="696" alt="BOTH PDBS" src="https://github.com/user-attachments/assets/c4c4a204-cd37-4a7b-9469-073f636c0b0a" />
-<img width="911" height="661" alt="DROP PDB" src="https://github.com/user-attachments/assets/067a919c-e223-4e04-9adf-1e5c07b7fbae" />
-<img width="781" height="427" alt="VERIFY DELETION" src="https://github.com/user-attachments/assets/906c7753-e6ae-4530-8e38-111384472719" />
+<img width="940" height="482" alt="temp creation" src="https://github.com/user-attachments/assets/55c2be5a-aa1c-42d1-ba96-8bbaefb8df29" />
 
+<img width="945" height="787" alt="both pdbs" src="https://github.com/user-attachments/assets/aa80b278-d705-4c6a-bf8f-717b7a1f1bf7" />
+
+
+<img width="933" height="333" alt="drop pdb" src="https://github.com/user-attachments/assets/37bb2dab-d2d2-4016-9878-64abeb9fc550" />
+
+
+<img width="951" height="531" alt="verify deletion" src="https://github.com/user-attachments/assets/e28ab762-391e-45fe-a078-3b2a4ea2576e" />
 
 ---
 
@@ -72,27 +79,21 @@ DROP PLUGGABLE DATABASE [RO_pdb_29152] INCLUDING DATAFILES;
 *Access:* https://localhost:5500/em (SYS as SYSDBA)
 
 *Evidence:* OEM dashboard screenshot showing PDB status and username.
-<img width="1344" height="628" alt="OEM_DASHBOARD" src="https://github.com/user-attachments/assets/2e2755c9-05d1-4bf7-94cc-df09ac49f896" />
 
-
----
-
-## Challenges and Solutions
-
-*Issue:* "Insufficient privileges" error when opening PDB  
-*Solution:* Reconnected as SYSDBA using sqlplus / as sysdba  
-*Learning:* Always verify SYSDBA connection for administrative tasks
+<img width="1892" height="851" alt="oem dashboard" src="https://github.com/user-attachments/assets/c6fc2f3b-4825-4c1a-8346-3ee363d0e66c" />
 
 ---
+
+
 
 
 ---
 
 ## Academic Integrity Statement
 
-I, *Rutayisire Gihozo Rolando* (ID: *29152*), declare this work is completed individually. All commands, screenshots, and documentation are my own. No AI tools or collaboration were used.
+I, *SHEJA HUGUES TONY* (ID: *29158*), declare this work is completed individually. All commands, screenshots, and documentation are my own. No AI tools or collaboration were used.
 
-*Signed:* Rutayisire Gihozo Rolando
+*Signed:* SHEJA HUGUES TONY
 *Date:* 13 february 2026
 
 ---
